@@ -2,8 +2,54 @@
 <html>
 <head>
 <title>CBF</title>
+<style>
+		.pfp{
+			position: fixed;
+			left: 90.5vw;
+			top: 10vh;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background-image: url('cbf/chad-jd-small.png');
+			
+		}
+		.pfp-text{
+			position: fixed;
+			left: 90vw;
+			top: 5vh;
+			width: 120px;
+			font-size: 12px;
+			text-align: center;
+		}
+		.pfp-container{
+			position: fixed;
+			left: 88vw;
+			top: 8vh;
+			width: 140px;
+			height: 140px;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			const images = [ 'images(1).png', 'images(2).png', 'photo.png', 'images(3).png'];
+			const randomImage = images[Math.floor(Math.random() * images.length)];
+			const pfpElement = document.querySelector('.pfp');
+			pfpElement.style.backgroundImage = `url('cbf/${randomImage}')`;
+			pfpElement.style.backgroundSize = 'cover';
+
+			const name = ['Chad', 'Leonard', 'Sonic', 'Kwebbelkop', 'Henry'];
+			const randomName = name[Math.floor(Math.random() * name.length)];
+			const pfpTextElement = document.querySelector('.pfp-text');
+			pfpTextElement.innerHTML = `your name is now:  <br> ${randomName}`;
+		};
+	</script>
 </head>
 <body>
+	<div class="pfp-container">
+		<p class="pfp-text">your profile picture:</p>
+		<a class="pfp"></a>
+		
+	</div>
 <h1> Cool Bro Facts(CBF) institute of natural sciences and art</h1>
 <h2>this is the free world wide institution of natural sciences, arts, baldness, and love of course!</h2>
 <p>you are now logged in :]</p>
